@@ -1,0 +1,45 @@
+<% if user_signed_in? %>
+   <li><%# link_to "EditProfile", edit_user_registration_path %></li>
+   <li><%= link_to "SignOut", destroy_user_session_path, method: :delete %></li>
+        
+  <p id="notice"><%= notice %></p>
+
+<h1>Listing Shift Details</h1> 
+
+<table>
+  <thead>
+    <tr>
+      <th>Shift_Name</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Description</th>
+      <th>User Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+
+    <% @shift_details.each do |shift_detail| %>
+      <tr>
+        <td><%= shift_detail.name %></td>
+        <td><%= shift_detail.start_time %></td>
+        <td><%= shift_detail.end_time %></td>
+        <td><%= shift_detail.description %></td>
+        <td><%= shift_detail.user.name %></td>
+        <td><%= link_to 'Show', shift_detail %></td>
+        <td><%= link_to 'Edit', edit_shift_detail_path(shift_detail) %></td>
+        <td><%= link_to 'Destroy', shift_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Create Shift detail', new_shift_detail_path %>
+<% if current_user.email == 'keshav.sp@tcs.com' %>
+  <%= link_to 'Manage Users', users_url %>
+ <%end%>
+<% end %>
