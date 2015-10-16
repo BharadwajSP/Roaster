@@ -1,0 +1,14 @@
+Style/Encoding:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 200
+
+Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 120
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
