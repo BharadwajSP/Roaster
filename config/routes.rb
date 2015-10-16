@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  root 'shift_details#index'
+  root 'home#index'
 
   devise_scope :user do
     get 'users/new' => 'users#new'

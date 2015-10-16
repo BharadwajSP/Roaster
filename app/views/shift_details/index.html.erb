@@ -1,12 +1,13 @@
 <% if user_signed_in? %>
    <li><%# link_to "EditProfile", edit_user_registration_path %></li>
-   <li><%= link_to "SignOut", destroy_user_session_path, method: :delete %></li>
-        
+   <li><%= link_to "SignOut", destroy_user_session_path,  class: "btn btn-info", method: :delete %></li>
+
   <p id="notice"><%= notice %></p>
 
-<h1>Listing Shift Details</h1> 
+<div class="container">
+  <h2>  Shift details </h2>
+  <table class="table">
 
-<table>
   <thead>
     <tr>
       <th>Shift_Name</th>
@@ -35,11 +36,11 @@
     <% end %>
   </tbody>
 </table>
-
+<div>
 <br>
 
-<%= link_to 'Create Shift detail', new_shift_detail_path %>
+<%= link_to 'Create Shift detail', new_shift_detail_path, class: "btn btn-info" %>
 <% if current_user.email == 'keshav.sp@tcs.com' %>
-  <%= link_to 'Manage Users', users_url %>
+  <%= link_to 'Manage Users', users_url, class: "btn btn-info" %>
  <%end%>
 <% end %>

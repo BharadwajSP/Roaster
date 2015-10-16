@@ -1,21 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
 
-<div>
+
+<div class = "container">
+  <h2> search users  </h2>
 <%= form_tag("/users",method: :get) do  %>
-  <div class="fields">
-    <input type = "text" name = 'name'/>
-</div>
+    <input type = "text" name = 'name'/><br><br>
 
-  <div class="actions">
-    <input type = "submit" name = 'search'/>
-</div>
+    <input type = "submit" name = 'search', class: "btn btn-primary"/>
 <%end%>
 </div>
 
-
-<table>
+<div class="container">
+  <table class="table">
+    <h1>Listing Users</h1>
   <thead>
     <tr>
         <th> UserName </th>
@@ -41,9 +39,8 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
-<%= link_to 'Back', shift_details_path %>
-<%= link_to 'New User', new_user_path %>
-
-
+<div class = "container">
+<%= link_to 'Back', shift_details_path, class: "btn btn-info" %>
+<%= link_to 'New User', new_user_path, class: "btn btn-info" %>

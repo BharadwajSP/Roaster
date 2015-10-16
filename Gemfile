@@ -21,6 +21,8 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 gem 'factory_girl_rails'
 gem 'rspec-rails'
 gem 'cancan'

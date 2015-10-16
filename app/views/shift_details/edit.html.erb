@@ -1,6 +1,13 @@
-<h1>Editing Shift Detail</h1>
+
+<div class=container>
+<div class="jumbotron">
+  <h1>Editing Shift Detail</h1>
+</div>
+
+
+
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @shift_detail %> |
-<%= link_to 'Back', shift_details_path %>
+<%= link_to 'Show', @shift_detail , class: "btn btn-info"%>
+<%= link_to 'Back', shift_details_path , class: "btn btn-info"%>
